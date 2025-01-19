@@ -6,22 +6,13 @@ import BookATable from '@/components/BookATable';
 import Cart from '@/components/Cart';
 import { usePathname } from 'next/navigation';
 import { Link } from 'lucide-react';
+import { menuItems } from '@/lib/menu_items';
 
 const Header = () => {
   const pathname = usePathname();
 
-  const menuItems = [
-    { name: 'Home', path: '/' },
-    { name: 'Menu', path: '/menu' },
-    { name: 'Catering', path: '/catering' },
-    { name: 'Functions', path: '/functions' },
-    { name: 'Cakes', path: '/cakes' },
-    { name: 'Locations', path: '/locations' },
-    { name: 'Gallery', path: '/gallery' },
-    { name: 'Contact', path: '/contact' },
-  ];
   return (
-    <header className='border rounded-md bg-white p-4 my-2 flex justify-between items-center shadow-md mx-auto max-width-4xl text-gray-800'>
+    <header className='sticky top-0 z-50 border rounded-md bg-white p-4  flex justify-between items-center shadow-md mx-auto max-width-2xl text-gray-800'>
       <Link href='/'>
         <Image src='/eq.png' alt='EQ' width={100} height={100} />
       </Link>
@@ -31,8 +22,8 @@ const Header = () => {
             <li key={item.name} className='inline-block mx-2'>
               <NavLink
                 href={item.path}
-                className={`hover:border-b-2 hover:border-yellow-200 active:border-yellow-400 ${
-                  pathname === item.path ? 'border-b-2 border-yellow-400' : ''
+                className={`font-bold pb-2 tracking-wide hover:scale-150 hover:border-b-4  hover:border-yellow-400 active:border-yellow-400 ${
+                  pathname === item.path ? 'border-b-4 border-yellow-500' : ''
                 }`}
               >
                 {item.name}

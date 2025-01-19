@@ -2,9 +2,11 @@ import type { Metadata } from 'next';
 import { Josefin_Sans } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/shared/Header';
+import Banner from '@/components/shared/Banner';
 
 const josefinSans = Josefin_Sans({
   variable: '--font-josefin-sans',
+  weight: ['100', '200', '300', '400', '500', '600', '700'],
   subsets: ['latin'],
 });
 
@@ -21,9 +23,11 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body
+        suppressHydrationWarning
         className={`${josefinSans.variable} antialiased bg-gray-900 text-white`}
       >
         <Header />
+        <Banner />
         {children}
       </body>
     </html>
