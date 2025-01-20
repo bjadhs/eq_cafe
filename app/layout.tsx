@@ -21,9 +21,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en'>
+    <html lang='en' suppressHydrationWarning>
       <body
-        suppressHydrationWarning
         className={`${josefinSans.variable} antialiased bg-gray-900 text-white`}
       >
         <Header />

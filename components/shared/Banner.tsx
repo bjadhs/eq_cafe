@@ -19,7 +19,6 @@ const Banner = () => {
         width={1920}
         height={200}
         // layout='fill'
-        objectFit='cover'
         placeholder='blur'
         blurDataURL='data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBYWFRgVFRYZGBgaGBgaGBgYGBgYGBgSGBgZGRgcGBgcIS4lHB4rHxgYJjgmKy8xNTU1GiQ7QDszPy40NTEBDAwMEA8QGhISHjQhISE0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NP/AABEIALcBEwMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAFAAIDBAYBBwj/xAA7EAACAQIEBAMFBwQCAwAAAAABAgADEQQhBQYSMUFRImFxgZEHEzKhsRQjQlLB0fDxYnKy4RUWJEP/...' // Low-resolution placeholder image (base64 encoded)
       />
