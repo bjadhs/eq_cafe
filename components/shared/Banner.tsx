@@ -11,22 +11,22 @@ const Banner = () => {
   const subtitle =
     path?.subtitle ?? 'Functions and catering perfectly crafted for you.';
   return (
-    <div className='relative z-0'>
+    <section className='relative width-full h-100vh mx-auto'>
       <Image
-        className='fill'
+        className='object-cover brightness-50'
         src='/coffee-banner.jpg'
         alt='Banner'
-        width={1920}
-        height={200}
-        // layout='fill'
-        placeholder='blur'
-        blurDataURL='data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBYWFRgVFRYZGBgaGBgaGBgYGBgYGBgSGBgZGRgcGBgcIS4lHB4rHxgYJjgmKy8xNTU1GiQ7QDszPy40NTEBDAwMEA8QGhISHjQhISE0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NP/AABEIALcBEwMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAFAAIDBAYBBwj/xAA7EAACAQIEBAMFBwQCAwAAAAABAgADEQQhBQYSMUFRImFxgZEHEzKhsRQjQlLB0fDxYnKy4RUWJEP/...' // Low-resolution placeholder image (base64 encoded)
+        width='1920'
+        height='1080'
+        priority
       />
-      <div className='absolute top-64 left-0 right-0 max-w-3xl mx-auto flex flex-col justify-center items-center'>
-        <h1 className='text-7xl font-extrabold text-white'>{title}</h1>
-        <p className='text-lg font-thin'>{subtitle}</p>
+      <div className='absolute left-0 right-0 max-w-3xl mx-auto flex flex-col justify-center items-center'>
+        <h1 className='text-3xl lg:text-7xl font-extrabold text-white'>
+          {title}
+        </h1>
+        <p className='text-sm lg:text-lg font-thin'>{subtitle}</p>
       </div>
-    </div>
+    </section>
   );
 };
 
