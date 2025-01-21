@@ -27,7 +27,6 @@ type ReservationData = {
 };
 
 const BookTableDialog = () => {
-  //   const [isOpen, setIsOpen] = useState(false);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
@@ -51,7 +50,7 @@ const BookTableDialog = () => {
     >
       <Dialog>
         <DialogTrigger asChild>
-          <Button size='sm' className='rounder-full' variant='secondary'>
+          <Button size='sm' variant='secondary'>
             Book a Table
           </Button>
         </DialogTrigger>

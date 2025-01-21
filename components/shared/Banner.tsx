@@ -2,7 +2,10 @@
 
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
+
 import { menuItems } from '@/lib/menu_items';
+import { Button } from '../ui/button';
+import { ChevronRight } from 'lucide-react';
 
 const Banner = () => {
   const pathname = usePathname();
@@ -11,20 +14,27 @@ const Banner = () => {
   const subtitle =
     path?.subtitle ?? 'Functions and catering perfectly crafted for you.';
   return (
-    <section className='relative width-full h-100vh mx-auto'>
+    <section className='relative max-w-full h-100vh mx-auto'>
       <Image
-        className='object-cover brightness-50'
+        className='object-contain '
         src='/coffee-banner.jpg'
         alt='Banner'
-        width='1920'
-        height='1080'
-        priority
+        width='6016'
+        height='4016'
       />
-      <div className='absolute left-0 right-0 max-w-3xl mx-auto flex flex-col justify-center items-center'>
-        <h1 className='text-3xl lg:text-7xl font-extrabold text-white'>
+
+      <div className='absolute  top-0 left-0 right-0 w-full h-full px-8 mx-auto bg-gray-700/40 flex flex-col justify-center items-center text-center gap-2'>
+        <h1 className='text-md  lg:text-7xl font-extrabold text-white'>
           {title}
         </h1>
         <p className='text-sm lg:text-lg font-thin'>{subtitle}</p>
+        <Button size='lg' variant='route'>
+          <span onClick={() => (window.location.href = '/')}>Home</span>
+          <ChevronRight size={24} />
+          <span onClick={() => (window.location.href = `/${path?.path}`)}>
+            {path?.name}
+          </span>
+        </Button>
       </div>
     </section>
   );

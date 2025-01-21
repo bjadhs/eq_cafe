@@ -27,7 +27,7 @@ export default function RootLayout({
       >
         <Navbar />
         <Banner />
-        <div className='max-width-7xl mx-auto bg-green-300'>{children}</div>
+        <div className='max-width-7xl mx-auto'>{children}</div>
       </body>
     </html>
   );
