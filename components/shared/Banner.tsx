@@ -13,28 +13,37 @@ const Banner = () => {
   const title = path?.title ?? 'EQ Cafe and Bakehouse';
   const subtitle =
     path?.subtitle ?? 'Functions and catering perfectly crafted for you.';
+
   return (
-    <section className='relative max-w-full h-100vh mx-auto'>
+    <section className='relative max-w-full backdrop-blur-sm shadow-lg'>
       <Image
-        className='object-contain '
+        className='object-contain blur-sm opacity-70'
         src='/coffee-banner.jpg'
         alt='Banner'
         width='6016'
         height='4016'
       />
 
-      <div className='absolute  top-0 left-0 right-0 w-full h-full px-8 mx-auto bg-gray-700/40 flex flex-col justify-center items-center text-center gap-2'>
-        <h1 className='text-md  lg:text-7xl font-extrabold text-white'>
-          {title}
-        </h1>
-        <p className='text-sm lg:text-lg font-thin'>{subtitle}</p>
-        <Button size='lg' variant='route'>
-          <span onClick={() => (window.location.href = '/')}>Home</span>
-          <ChevronRight size={24} />
-          <span onClick={() => (window.location.href = `/${path?.path}`)}>
-            {path?.name}
-          </span>
-        </Button>
+      <div className='absolute top-0 left-0 right-0 lg:h-screen'>
+        <div className='max-w-2xl px-4 mx-auto py-16 lg:h-screen flex flex-col justify-center items-center gap-12 text-center'>
+          <div className='flex flex-col gap-2 '>
+            <h2 className='text-xl md:text-3xl lg:text-5xl font-bold text-white leading-[20px]'>
+              {title}
+            </h2>
+            <p className='text-[12px] md:text-xs lg:text-lg font-thin'>
+              {subtitle}
+            </p>
+          </div>
+          {path?.path !== '/' && (
+            <Button size='sr' variant='route' className=''>
+              <span onClick={() => (window.location.href = '/')}>Home</span>
+              <ChevronRight size={8} />
+              <span onClick={() => (window.location.href = `/${path?.path}`)}>
+                {path?.name}
+              </span>
+            </Button>
+          )}
+        </div>
       </div>
     </section>
   );

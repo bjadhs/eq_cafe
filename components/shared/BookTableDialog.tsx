@@ -8,6 +8,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
+  DialogDescription,
 } from '@/components/ui/dialog';
 import { Input } from '@/components/ui/input';
 import {
@@ -60,6 +61,9 @@ const BookTableDialog = () => {
             <DialogTitle className='text-3xl font-semibold'>
               Table Reservation
             </DialogTitle>
+            <DialogDescription>
+              Please fill out the form below to reserve a table.
+            </DialogDescription>
           </DialogHeader>
 
           <div className='grid grid-cols-3 gap-4 py-4'>
