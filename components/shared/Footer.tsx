@@ -1,5 +1,7 @@
 'use client';
 import { Button } from '../ui/button';
+import AboutSection from './AboutSection';
+import DashLine from './DashLine';
 import MenuItem from './MenuItem';
 
 const Footer = () => {
@@ -11,10 +13,12 @@ const Footer = () => {
   };
 
   return (
-    <div className='container w-full flex flex-col justify-center items-center gap-4 py-4'>
+    <div className=' w-full flex flex-col justify-center items-center gap-4 py-4'>
+      <DashLine />
+      <AboutSection />
       <MenuItem isMobile={false} />
-      <div className='w-full border-2 border-spacing-4 border-gray-700 border-dashed'></div>
-      <div className='flex justify-between items-center w-full py-8'>
+      <DashLine />
+      <div className='container flex justify-between items-center w-full py-8'>
         <p className='text-sm font-thin text-white'>
           © 2025 EQ Cafe and Bakehouse. All rights reserved.
         </p>

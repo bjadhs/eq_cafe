@@ -14,7 +14,7 @@ const MenuItem = ({ isMobile }: MenuItemProps) => {
     <ul
       className={cn(
         isMobile ? 'mt-6 flex flex-col' : 'hidden lg:flex lg:flex-1',
-        'gap-2'
+        'container gap-2'
       )}
     >
       {menuItems.map((item) => (

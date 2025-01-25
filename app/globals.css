@@ -1,10 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
+  body {
+    font-family: 'Josefin Sans', sans-serif;
+  }
+  h2 {
+    @apply text-xl font-bold mb-4;
+  }
+  p {
+    @apply text-xs font-light leading-5;
+  }
+}
+
+@layer utilities {
   .container {
-    @apply max-w-2xl mx-auto px-16;
+    @apply max-w-7xl mx-auto px-16;
   }
 }
 
