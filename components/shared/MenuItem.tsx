@@ -1,3 +1,4 @@
+'use client';
 import { menuItems } from '@/lib/menu_items';
 import { cn } from '@/lib/utils';
 import NavLink from 'next/link';
