@@ -21,6 +21,7 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [count, setCount] = useState(2);
   const handleIncrement = () => setCount(count + 1);
+  console.log(isOpen);
 
   return (
     <header className='sticky top-0 z-50 border-b rounded-md bg-white/90 backdrop-blur p-4 shadow-md mx-auto max-width-2xl text-gray-800'>
@@ -40,7 +41,7 @@ const Header = () => {
               variant='ghost'
               onClick={handleIncrement}
             >
-              <ShoppingCart size='xs' />
+              <ShoppingCart size={16} />
               <span className='absolute -top-3 -right-2 h-4 w-4 flex items-center justify-center bg-[#D1B019] border border-gray-400 rounded-full text-[10px] font-semibold text-gray-800'>
                 {count}
               </span>
@@ -62,7 +63,7 @@ const Header = () => {
                     </NavLink>
                   </SheetTitle>
                 </SheetHeader>
-                <MenuItem isMobile={true} />
+                <MenuItem isMobile={true} setIsOpen={setIsOpen} />
               </SheetContent>
             </Sheet>
           </div>

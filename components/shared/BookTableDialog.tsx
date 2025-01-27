@@ -55,13 +55,16 @@ const BookTableDialog = () => {
             Book a Table
           </Button>
         </DialogTrigger>
-        <DialogContent className='md:max-w-[600px] bg-white rounded-full shadow-lg text-black'>
+        <DialogContent
+          className='md:max-w-[600px] bg-white rounded-full shadow-lg text-black'
+          aria-describedby='book-table-description'
+        >
           <DialogHeader className='flex flex-col items-center gap-4'>
             <div className='bg-yellow-500 w-8 h-1 rounded-full'></div>
             <DialogTitle className='text-3xl font-semibold'>
               Table Reservation
             </DialogTitle>
-            <DialogDescription>
+            <DialogDescription id='book-table-description'>
               Please fill out the form below to reserve a table.
             </DialogDescription>
           </DialogHeader>
