@@ -11,8 +11,15 @@
   html{
     @apply scroll-smooth;
   }
+  h1{
+    @apply text-4xl font-bold mb-4;
+  }
+
   h2 {
     @apply text-xl font-bold mb-4;
+  }
+  h3{
+    @apply text-[12px] font-semibold mb-4 uppercase;
   }
   p {
     @apply text-xs font-light leading-5;

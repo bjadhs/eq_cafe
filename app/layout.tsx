@@ -29,7 +29,9 @@ export default function RootLayout({
         <Navbar />
         <Banner />
 
-        <div className='container min-h-56'>{children}</div>
+        <div className='container min-h-[200px]] flex flex-col justify-center items-center text-center bg-white text-black py-8'>
+          {children}
+        </div>
         <Footer />
       </body>
     </html>

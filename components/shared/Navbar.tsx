@@ -3,7 +3,6 @@
 import NavLink from 'next/link';
 import Image from 'next/image';
 import { Menu, ShoppingCart } from 'lucide-react';
-import eq from '@/public/eq.png'; // Ensure this path is correct
 import { Button } from '@/components/ui/button';
 
 import BookTableDialog from './BookTableDialog';
@@ -27,10 +26,10 @@ const Header = () => {
     <header className='sticky top-0 z-50 border-b rounded-md bg-white/90 backdrop-blur p-4 shadow-md mx-auto max-width-2xl text-gray-800'>
       <nav className='max-w-6xl mx-auto h-6 flex justify-between items-center px-2 sm:px-4 lg:px-6 gap-8'>
         <NavLink href='/'>
-          <Image src={eq} alt='EQ' width={60} height={60} />
+          <Image src={'/eq.png'} alt='EQ' width={60} height={60} />
         </NavLink>
 
-        <MenuItem isMobile={false} />
+        <MenuItem isMobile={false} setIsOpen={setIsOpen} />
 
         <div className='flex items-center gap-8'>
           <BookTableDialog />
@@ -59,7 +58,7 @@ const Header = () => {
                 <SheetHeader>
                   <SheetTitle>
                     <NavLink href='/'>
-                      <Image src={eq} alt='EQ' width={50} height={50} />
+                      <Image src={'/eq.png'} alt='EQ' width={50} height={50} />
                     </NavLink>
                   </SheetTitle>
                 </SheetHeader>
