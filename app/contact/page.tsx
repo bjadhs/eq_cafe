@@ -1,3 +1,4 @@
+import MessageForm from '@/components/shared/MessageForm';
 import { Mails } from 'lucide-react';
 
 const emailList = [
@@ -11,12 +12,12 @@ const emailList = [
 
 const Contact = () => {
   return (
-    <div>
+    <div className='box bg-white rounded-md text-black p-8 flex flex-col justify-center items-center gap-4 '>
       <div className='flex flex-col items-center gap-2'>
         <div className='h-[6px] w-6 bg-[#D1B019] border rounded-full'></div>
         <h3>Contact</h3>
       </div>
-      <div className='pb-8'>
+      <div className='pb-8 flex flex-col items-center'>
         <h1>Contact information</h1>
         <p>
           Contact us for any inquiries or reservations. We’re here to help and
@@ -24,7 +25,7 @@ const Contact = () => {
         </p>
       </div>
 
-      <div className='flex justify-between  gap-2'>
+      <div className='flex w-full gap-4'>
         {/* Write email to us */}
         <div className='flex flex-col items-center gap-1'>
           <Mails size={48} />
@@ -34,6 +35,7 @@ const Contact = () => {
           ))}
         </div>
         {/* Form to send message */}
+        <MessageForm />
       </div>
     </div>
   );

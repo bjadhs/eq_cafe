@@ -24,7 +24,7 @@ const Banner = () => {
         height='4016'
       />
 
-      <div className='absolute top-0 left-0 right-0 lg:h-screen'>
+      <div className='absolute -top-10 left-0 right-0 lg:h-screen'>
         <div className='max-w-2xl px-4 mx-auto py-16 lg:h-screen flex flex-col justify-center items-center gap-12 text-center'>
           <div className='flex flex-col gap-2 '>
             <h2 className='text-xl md:text-3xl lg:text-5xl font-bold text-white leading-[20px]'>

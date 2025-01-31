@@ -5,6 +5,12 @@
 @tailwind utilities;
 
 @layer base {
+
+:root {
+  --shadow-size: 0px 16px 2px -4px;
+  --shadow-color: rgba(255, 255, 255, 0.2);
+  
+}
   body {
     font-family: 'Josefin Sans', sans-serif;
   }
@@ -24,12 +30,23 @@
   p {
     @apply text-xs font-light leading-5;
   }
+  input{
+    @apply px-4 py-1 border border-gray-100 rounded-md shadow-lg outline-none;
+  }
+  textarea{
+    @apply px-4 py-1 my-4 border border-gray-100 rounded-md shadow-lg outline-none;
+  }
 }
 
 @layer utilities {
   .container {
     @apply max-w-7xl mx-auto px-16;
   }
+  .box {
+    box-shadow: var(--shadow-size) var(--shadow-color);
+  }
+
 }
+
 
 
