@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 import { Josefin_Sans } from 'next/font/google';
 import './globals.css';
-import Navbar from '@/components/shared/Header';
-import Header from '@/components/shared/Banner';
+import Header from '@/components/shared/Header';
+import Banner from '@/components/shared/Banner';
 import Footer from '@/components/shared/Footer';
 
 const josefinSans = Josefin_Sans({
@@ -26,10 +26,10 @@ export default function RootLayout({
       <body
         className={`${josefinSans.variable} antialiased bg-gray-900 text-white`}
       >
-        <Navbar />
         <Header />
+        <Banner />
 
-        <div className='absolute z-100 top-60 left-0 right-0 min-h-[200px]] min-w-7xl mx-auto flex flex-col justify-center items-center py-8'>
+        <div className='absolute z-100 top-64 left-0 right-0 min-h-[700px]] max-w-5xl mx-auto py-8 px-16 w-[90%] box bg-gray-100 rounded-md text-black'>
           {children}
         </div>
         <Footer />

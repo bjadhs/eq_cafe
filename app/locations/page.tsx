@@ -1,5 +1,5 @@
 const Locations = () => {
-  return <div>Locations</div>;
+  return <div className='text-red-500 bg-green-200'>Locations</div>;
 };
 
 export default Locations;
