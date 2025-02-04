@@ -1,88 +1,52 @@
+'use client';
 import galleryItems, { GalleryType } from '@/lib/gallery_items';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import Image from 'next/image';
+import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import CustomTabsContent from '@/components/CustomTabsContent';
+import { useEffect, useState } from 'react';
 
 const Gallery = () => {
-  const allGalleryItems = galleryItems;
-  const venueGalleryItems = galleryItems.filter(
-    (g) => g.gallery === GalleryType.Venue
-  );
-  const menuGalleryItems = galleryItems.filter(
-    (g) => g.gallery === GalleryType.Menu
-  );
-  const cateringGalleryItems = galleryItems.filter(
-    (g) => g.gallery === GalleryType.Catering
-  );
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [activeTab, setActiveTab] = useState('All');
+  const filterGalleryItems = (type: GalleryType) =>
+    galleryItems.filter((g) => g.gallery === type);
+
+  const tabs = [
+    { value: 'All', items: galleryItems },
+    { value: 'Venue', items: filterGalleryItems(GalleryType.Venue) },
+    { value: 'Menu', items: filterGalleryItems(GalleryType.Menu) },
+    { value: 'Catering', items: filterGalleryItems(GalleryType.Catering) },
+  ];
+
+  useEffect(() => {
+    setIsLoaded(true);
+  }, [activeTab]);
 
   return (
     <div>
-      <Tabs defaultValue='All' className=''>
+      <Tabs
+        defaultValue='All'
+        className=''
+        onValueChange={(value) => {
+          setActiveTab(value);
+          setIsLoaded(false);
+        }}
+      >
         <TabsList className='w-full mx-auto gap-4 pb-4'>
-          <TabsTrigger value='All'>All</TabsTrigger>
-          <TabsTrigger value='Venue'>Venue</TabsTrigger>
-          <TabsTrigger value='Menu'>Menu</TabsTrigger>
-          <TabsTrigger value='Catering'>Catering</TabsTrigger>
+          {tabs.map((tab) => (
+            <TabsTrigger key={tab.value} value={tab.value}>
+              {tab.value}
+            </TabsTrigger>
+          ))}
         </TabsList>
 
-        <TabsContent value='All'>
-          <div className='grid grid-cols-3 gap-4'>
-            {allGalleryItems.map((item) => (
-              <div key={item.id}>
-                <Image
-                  src={item.img}
-                  alt={item.info}
-                  width={300}
-                  height={200}
-                />
-              </div>
-            ))}
-          </div>
-        </TabsContent>
-
-        <TabsContent value='Venue'>
-          <div className='grid grid-cols-3 gap-4'>
-            {venueGalleryItems.map((item) => (
-              <div key={item.id}>
-                <Image
-                  src={item.img}
-                  alt={item.info}
-                  width={300}
-                  height={200}
-                />
-              </div>
-            ))}
-          </div>
-        </TabsContent>
-
-        <TabsContent value='Menu'>
-          <div className='grid grid-cols-3 gap-4'>
-            {menuGalleryItems.map((item) => (
-              <div key={item.id}>
-                <Image
-                  src={item.img}
-                  alt={item.info}
-                  width={300}
-                  height={200}
-                />
-              </div>
-            ))}
-          </div>
-        </TabsContent>
-
-        <TabsContent value='Catering'>
-          <div className='grid grid-cols-3 gap-4'>
-            {cateringGalleryItems.map((item) => (
-              <div key={item.id}>
-                <Image
-                  src={item.img}
-                  alt={item.info}
-                  width={300}
-                  height={200}
-                />
-              </div>
-            ))}
-          </div>
-        </TabsContent>
+        {tabs.map((tab) => (
+          <CustomTabsContent
+            key={tab.value}
+            value={tab.value}
+            galleryItems={tab.items}
+            isLoaded={isLoaded}
+          />
+        ))}
       </Tabs>
     </div>
   );

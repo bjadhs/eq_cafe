@@ -13,7 +13,8 @@ const Footer = () => {
   };
 
   return (
-    <div className=' w-full flex flex-col justify-center items-center gap-4 py-4'>
+    <div className='w-full flex flex-col justify-center items-center gap-4 py-4'>
+      <div className='h-[300px]' />
       <DashLine />
       <AboutSection />
       <MenuItem isMobile={false} />

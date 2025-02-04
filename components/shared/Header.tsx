@@ -20,7 +20,6 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [count, setCount] = useState(2);
   const handleIncrement = () => setCount(count + 1);
-  console.log(isOpen);
 
   return (
     <header className='box sticky top-0 z-50 border-b rounded-b-lg bg-white/90 backdrop-blur py-2 mx-auto max-width-2xl text-gray-800'>

@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 type MenuItemProps = {
   isMobile: boolean;
-  setIsOpen: (isOpen: boolean) => void;
+  setIsOpen?: (isOpen: boolean) => void;
 };
 
 const MenuItem = ({ isMobile, setIsOpen }: MenuItemProps) => {

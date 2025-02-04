@@ -5,6 +5,13 @@
   Catering = 'Catering'
 }
 
+export interface GalleryItem {
+    id: number;
+    gallery: GalleryType;
+    info: string;
+    img: string;
+    }
+
 export const galleryItems = [
   {
     id: 1,
