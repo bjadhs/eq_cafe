@@ -29,7 +29,7 @@ export default function RootLayout({
         <Header />
         <Banner />
 
-        <div className='absolute z-100 top-[400px] left-0 right-0 min-h-[800px] max-w-5xl mx-auto py-8 px-16 w-[90%] box bg-gray-100 rounded-md text-black'>
+        <div className='absolute z-100 top-[400px] left-0 right-0 max-h-[1000px] max-w-5xl mx-auto py-8 px-16 w-[90%] box bg-gray-100 rounded-md text-black'>
           {children}
         </div>
         <Footer />
