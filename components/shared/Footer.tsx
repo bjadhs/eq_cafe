@@ -15,10 +15,10 @@ const Footer = () => {
   return (
     <div className='w-full flex flex-col justify-center items-center gap-4 py-4'>
       <div className='h-[300px]' />
-      <DashLine />
+      <DashLine color='border-gray-700' />
       <AboutSection />
       <MenuItem isMobile={false} />
-      <DashLine />
+      <DashLine color='border-gray-700' />
       <div className='container flex justify-between items-center w-full py-8'>
         <p className='text-sm font-thin text-white'>
           © 2025 EQ Cafe and Bakehouse. All rights reserved.

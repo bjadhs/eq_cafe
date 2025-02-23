@@ -1,6 +1,8 @@
-const DashLine = () => {
+const DashLine = ({ color }: { color: string }) => {
   return (
-    <div className='w-full border-2 border-spacing-4 border-gray-700 border-dashed'></div>
+    <div
+      className={`w-full border-2 border-spacing-4 ${color} border-dashed`}
+    ></div>
   );
 };
 
