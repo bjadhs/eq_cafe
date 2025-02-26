@@ -9,6 +9,7 @@
 :root {
   --shadow-size: 0px 16px 2px -4px;
   --shadow-color: rgba(255, 255, 255, 0.2);
+  --secondary: #D1B019;
   
 }
   body {
@@ -25,7 +26,7 @@
     @apply text-xl font-bold;
   }
   h3{
-    @apply text-[12px] font-semibold mb-4 uppercase;
+    @apply text-[14px] font-semibold uppercase;
   }
   p {
     @apply text-xs font-light leading-5;

@@ -1,4 +1,5 @@
 import MessageForm from '@/components/shared/MessageForm';
+import Topic from '@/components/shared/Topic';
 import { Mails } from 'lucide-react';
 
 const emailList = [
@@ -13,10 +14,7 @@ const emailList = [
 const Contact = () => {
   return (
     <div>
-      <div className='flex flex-col items-center gap-2'>
-        <div className='h-[6px] w-6 bg-[#D1B019] border rounded-full'></div>
-        <h3>Contact</h3>
-      </div>
+      <Topic title='CONTACT' />
       <div className='pb-8 flex flex-col items-center'>
         <h1>Contact information</h1>
         <p>
