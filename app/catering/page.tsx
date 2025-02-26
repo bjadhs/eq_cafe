@@ -1,4 +1,5 @@
 import CateringBookingForm from '@/components/CateringBookingForm';
+import Topic from '@/components/shared/Topic';
 import { Info } from 'lucide-react';
 
 const Catering = () => {
@@ -12,6 +13,7 @@ const Catering = () => {
         Choose your preferred location to book catering from the options below.
       </h2>
       <CateringBookingForm />
+      <Topic title='Our Catering Menu' />
     </div>
   );
 };
